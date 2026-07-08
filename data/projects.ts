@@ -27,12 +27,15 @@ export const projects: Project[] = [
     ],
   },
   {
-    status: "LIVE",
-    title: "React Todo List App",
+    status: "COMING SOON",
+    title: "AuthTrail",
     description:
-      "Full CRUD todo app built with React — state management, reusable components, and localStorage persistence.",
-    tags: ["React", "localStorage"],
-    links: [{ label: "Source ↗", href: "https://github.com/QueenNatty" }],
+      "This is a secure Django web app that tracks and displays user login activity. Users can view their login history, filter by date and status, and monitor failed login attempts..",
+    tags: ["React", "localStorage", "HTML", "BOOTSTRAP 5", "Python(DJANGO)"]
+    links: [
+      { label: "Source ↗", href: "https://github.com/QueenNatty/AuthTrail" }
+      { label: "Source ↗", href: " "}
+    ],
   },
   {
     status: "COMING SOON",
