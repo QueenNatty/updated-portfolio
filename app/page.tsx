@@ -72,14 +72,14 @@ export default function Page() {
 
         {/* HERO */}
         <Reveal as="header" id="hero" className="hero">
-          <Image
+          {/* <Image
             src="/assets/avatar.png"
             alt="Natania Ezeigwe"
             width={140}
             height={140}
             className="hero_avatar"
             priority
-          />
+          /> */}
           <div className="hero__eyebrow">
             <span className="dot" /> PLAYER READY{" "}
             <span className="hero__loc">// FUTO, Nigeria</span>
