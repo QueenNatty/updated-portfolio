@@ -16,6 +16,8 @@ contact form.
 │   ├── Reveal.tsx      # scroll-reveal wrapper
 │   ├── StatBar.tsx     # animated skill bar
 │   └── ContactForm.tsx # contact form (Formspree)
+├── data/
+│   └── projects.ts     # edit this to change your projects
 ├── public/
 │   └── assets/Natania_Ezeigwe_Resume.docx
 ├── .env.example
@@ -50,15 +52,20 @@ Free tier covers 50 submissions/month — plenty for a portfolio. On Netlify/Ver
 add `NEXT_PUBLIC_FORMSPREE_ID` as an environment variable in the site settings
 so it works in production too.
 
-## Adding project links
+## Changing your projects
 
-Open `app/page.tsx` and find the `ADD MORE PROJECTS HERE` comment inside the
-Projects section. Copy an existing `<article className="quest-card">` block and edit:
+Projects live in **`data/projects.ts`** — a plain array, no JSX to touch. Open it and:
 
-- the status badge (`LIVE` / `IN PROGRESS`)
-- the title and description
-- the tags
-- the links (swap `href="#"` for your real project/demo URLs)
+- **Edit an existing project**: change `title`, `description`, `tags`, or `links`.
+- **Add a project**: copy one of the objects in the array, paste it, edit the fields.
+- **Remove a project**: delete its object.
+- **Status**: use `"LIVE"`, `"IN PROGRESS"`, or `"COMING SOON"` (the last renders as a
+  greyed-out locked card with no links needed).
+- **Links**: add as many as you want — `{ label: "Demo ↗", href: "..." }` — or leave
+  `links: []` for a "no link yet" card.
+
+The page automatically re-renders the project cards from this file — no other file
+needs to change.
 
 ## Deploying
 

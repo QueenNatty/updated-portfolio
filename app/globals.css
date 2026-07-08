@@ -256,6 +256,7 @@ a{ color:inherit; text-decoration:none; }
   padding:4px 10px; border-radius:20px;
 }
 .quest-card__status--live{ background:rgba(124,255,178,.12); color:var(--accent); }
+.quest-card__status--progress{ background:rgba(140,124,255,.14); color:var(--accent-2); }
 .quest-card__status--soon{ background:rgba(136,145,167,.15); color:var(--muted); }
 .quest-card h3{ font-family:var(--ff-display); font-size:19px; }
 .quest-card p{ color:var(--muted); font-size:14px; }

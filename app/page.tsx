@@ -5,6 +5,7 @@ import BootScreen from "@/components/BootScreen";
 import Reveal from "@/components/Reveal";
 import StatBar from "@/components/StatBar";
 import ContactForm from "@/components/ContactForm";
+import { projects } from "@/data/projects";
 
 const skills = [
   { label: "Frontend (React / Next.js)", value: 90 },
@@ -141,87 +142,51 @@ export default function Page() {
           </div>
 
           <div className="quests">
-            <article className="quest-card">
-              <div className="quest-card__status quest-card__status--live">
-                LIVE
-              </div>
-              <h3>This Portfolio</h3>
-              <p>
-                Rebuilt with a game-inspired HUD, animated stat bars, and a
-                working contact console. Built with Next.js, deployed on
-                Netlify/Vercel.
-              </p>
-              <div className="quest-card__tags">
-                <span>Next.js</span>
-                <span>React</span>
-              </div>
-              <div className="quest-card__links">
-                <a
-                  href="https://new-next-portfolio.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Site ↗
-                </a>
-                <a
-                  href="https://github.com/QueenNatty"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Source ↗
-                </a>
-              </div>
-            </article>
+            {projects.map((p) => {
+              const isLocked = p.status === "COMING SOON";
+              const statusClass =
+                p.status === "LIVE"
+                  ? "quest-card__status--live"
+                  : p.status === "IN PROGRESS"
+                  ? "quest-card__status--progress"
+                  : "quest-card__status--soon";
 
-            <article className="quest-card">
-              <div className="quest-card__status quest-card__status--live">
-                LIVE
-              </div>
-              <h3>React Todo List App</h3>
-              <p>
-                Full CRUD todo app built with React — state management,
-                reusable components, and localStorage persistence.
-              </p>
-              <div className="quest-card__tags">
-                <span>React</span>
-                <span>localStorage</span>
-              </div>
-              <div className="quest-card__links">
-                <a
-                  href="https://github.com/QueenNatty"
-                  target="_blank"
-                  rel="noopener noreferrer"
+              return (
+                <article
+                  className={`quest-card${isLocked ? " quest-card--locked" : ""}`}
+                  key={p.title}
                 >
-                  Source ↗
-                </a>
-              </div>
-            </article>
-
-            {/*
-              ADD MORE PROJECTS HERE.
-              Copy the <article className="quest-card"> block above and edit:
-              - status: "LIVE" or "IN PROGRESS" (swap the modifier class too)
-              - title, description, tags
-              - links: replace href="#" placeholders with your real links
-            */}
-            <article className="quest-card quest-card--locked">
-              <div className="quest-card__status quest-card__status--soon">
-                COMING SOON
-              </div>
-              <h3>Next Build</h3>
-              <p>
-                Reserved slot — drop in your next project link and this quest
-                unlocks.
-              </p>
-              <div className="quest-card__tags">
-                <span>???</span>
-              </div>
-              <div className="quest-card__links">
-                <a href="#" className="is-disabled" aria-disabled="true">
-                  Awaiting link
-                </a>
-              </div>
-            </article>
+                  <div className={`quest-card__status ${statusClass}`}>
+                    {p.status}
+                  </div>
+                  <h3>{p.title}</h3>
+                  <p>{p.description}</p>
+                  <div className="quest-card__tags">
+                    {p.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                  <div className="quest-card__links">
+                    {p.links.length > 0 ? (
+                      p.links.map((link) => (
+                        <a
+                          key={link.label}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {link.label}
+                        </a>
+                      ))
+                    ) : (
+                      <a href="#" className="is-disabled" aria-disabled="true">
+                        Awaiting link
+                      </a>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </Reveal>
 
@@ -231,6 +196,7 @@ export default function Page() {
             <p className="section__eyebrow">03 // Achievements Unlocked</p>
             <h2 className="section__title">Certifications</h2>
           </div>
+
 
           <div className="achievements">
             {achievements.map((a) => (
