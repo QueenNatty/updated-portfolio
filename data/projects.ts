@@ -22,7 +22,7 @@ export const projects: Project[] = [
       "Rebuilt with a game-inspired HUD, animated stat bars, and a working contact console. Built with Next.js, deployed on Netlify/Vercel.",
     tags: ["Next.js", "React"],
     links: [
-      { label: "Live Site ↗", href: "https://new-next-portfolio.netlify.app/" },
+      { label: "Live Site ↗", href: "https://nattycodesandgames.vercel.app/" },
       { label: "Source ↗", href: "https://github.com/QueenNatty" },
     ],
   },
