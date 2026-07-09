@@ -31,9 +31,9 @@ export const projects: Project[] = [
     title: "AuthTrail",
     description:
       "This is a secure Django web app that tracks and displays user login activity. Users can view their login history, filter by date and status, and monitor failed login attempts..",
-    tags: ["React", "localStorage", "HTML", "BOOTSTRAP 5", "Python(DJANGO)"]
+    tags: ["React", "localStorage", "HTML", "BOOTSTRAP 5", "Python(DJANGO)"],
     links: [
-      { label: "Source ↗", href: "https://github.com/QueenNatty/AuthTrail" }
+      { label: "Source ↗", href: "https://github.com/QueenNatty/AuthTrail" },
       { label: "Source ↗", href: " "}
     ],
   },
