@@ -50,8 +50,8 @@ export const projects: Project[] = [
 
   {
     status: "LIVE",
-    title: " ",
-    description: " hjki",
+    title: " AI Poem Generator",
+    description: " This is an ai poem generator peoject for my SheCodes AI- Add-Ons final project",
     tags: ["JavaScript", "HTML", ],
     links: [
       { label: "Live Site ↗", href: "https://ai-poems-gen.netlify.app" },
