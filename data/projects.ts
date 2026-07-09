@@ -38,11 +38,13 @@ export const projects: Project[] = [
     ],
   },
   {
-    status: "COMING SOON",
-    title: "Next Build",
+    status: "IN PROGRESS",
+    title: "Atelier-Ink",
     description:
-      "Reserved slot — drop in your next project link and this quest unlocks.",
-    tags: ["???"],
-    links: [],
+      "This is a sleek booking and consultation management system for tattoo and piercing studios, featuring automated session blocking and artist availability.",
+    tags: ["TypeScript", "Python(DJANGO)", "CSS",],
+    links: [
+      {label: "Source ↗", href: "https://github.com/QueenNatty/Atelier-Ink"},
+    ],
   },
 ];
