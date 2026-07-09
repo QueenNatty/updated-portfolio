@@ -33,8 +33,8 @@ export const projects: Project[] = [
       "This is a secure Django web app that tracks and displays user login activity. Users can view their login history, filter by date and status, and monitor failed login attempts..",
     tags: ["React", "localStorage", "HTML", "BOOTSTRAP 5", "Python(DJANGO)"],
     links: [
+      { label: "Live Site ↗", href: " "},
       { label: "Source ↗", href: "https://github.com/QueenNatty/AuthTrail" },
-      { label: "Source ↗", href: " "}
     ],
   },
   {
@@ -46,5 +46,16 @@ export const projects: Project[] = [
     links: [
       {label: "Source ↗", href: "https://github.com/QueenNatty/Atelier-Ink"},
     ],
+  },
+
+  {
+    status: "LIVE",
+    title: " ",
+    description: " hjki",
+    tags: ["JavaScript", "HTML", ],
+    links: [
+      { label: "Live Site ↗", href: "https://ai-poems-gen.netlify.app" },
+      { label: "Source ↗", href : " https://github.com/QueenNatty/poem-generator "},
+    ]
   },
 ];
