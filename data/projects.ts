@@ -38,7 +38,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    status: "IN PROGRESS",
+    status: "LIVE",
     title: "Atelier-Ink",
     description:
       "This is a sleek booking and consultation management system for tattoo and piercing studios, featuring automated session blocking and artist availability.",
