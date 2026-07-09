@@ -27,7 +27,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    status: "COMING SOON",
+    status: "IN PROGRESS",
     title: "AuthTrail",
     description:
       "This is a secure Django web app that tracks and displays user login activity. Users can view their login history, filter by date and status, and monitor failed login attempts..",
