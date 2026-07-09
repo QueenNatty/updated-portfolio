@@ -44,6 +44,7 @@ export const projects: Project[] = [
       "This is a sleek booking and consultation management system for tattoo and piercing studios, featuring automated session blocking and artist availability.",
     tags: ["TypeScript", "Python(DJANGO)", "CSS",],
     links: [
+{ label:  "Live Site ↗ ", href :"https://atelier-ink.onrender.com"},
       {label: "Source ↗", href: "https://github.com/QueenNatty/Atelier-Ink"},
     ],
   },
